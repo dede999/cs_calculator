@@ -32,7 +32,7 @@ public abstract class BasicArithmetic<T> where T : INumber<T>
 
     public abstract T Power(T a, T b);
 
-    public abstract T Tetration(T a, T b);
+    public abstract T Tetration(T a, int b);
 
     public abstract T Factorial(T a);
 }

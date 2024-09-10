@@ -11,7 +11,7 @@ class MyDoubleCalculatorClass : BasicArithmetic<double>
         throw new NotImplementedException();
     }
 
-    public override double Tetration(double a, double b)
+    public override double Tetration(double a, int b)
     {
         throw new NotImplementedException();
     }
