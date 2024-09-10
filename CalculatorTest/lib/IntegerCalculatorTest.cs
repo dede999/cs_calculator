@@ -1,4 +1,5 @@
 using Calculator;
+using Calculator.Exceptions;
 
 namespace CalculatorTest.lib;
 
@@ -13,6 +14,12 @@ public class IntegerCalculatorTest
     public void PowerTest(int expected, int a, int b)
     {
         Assert.Equal(expected, _calculator.Power(a, b));
+    }
+
+    [Fact]
+    public void PowerTest_ThrowsOperationDomainException()
+    {
+        Assert.Throws<OperationDomainException>(() => _calculator.Power(1, -1));
     }
     
     [Theory]
@@ -37,5 +44,11 @@ public class IntegerCalculatorTest
     public void FactorialTest(int expected, int a)
     {
         Assert.Equal(expected, _calculator.Factorial(a));
+    }
+    
+    [Fact]
+    public void FactorialTest_ThrowsOperationDomainException()
+    {
+        Assert.Throws<OperationDomainException>(() => _calculator.Factorial(-1));
     }
 }
