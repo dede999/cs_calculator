@@ -51,4 +51,22 @@ public class IntegerCalculatorTest
     {
         Assert.Throws<OperationDomainException>(() => _calculator.Factorial(-1));
     }
+
+    [Theory]
+    [InlineData(1, 0, 0)]
+    [InlineData(1, 1, 1)]
+    [InlineData(1, 2, 0)]
+    [InlineData(3, 3, 1)]
+    [InlineData(3, 3, 2)]
+    [InlineData(6, 4, 2)]
+    public void BinomialCoefficientTest(int expected, int n, int k)
+    {
+        Assert.Equal(expected, _calculator.BinomialCoefficient(n, k));
+    }
+
+    [Fact]
+    public void BinomialCoefficientTestException()
+    {
+        Assert.Throws<OperationDomainException>(() => _calculator.BinomialCoefficient(1, 2));
+    }
 }

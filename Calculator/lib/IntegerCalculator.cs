@@ -45,4 +45,12 @@ public class IntegerCalculator: BasicArithmetic<int>
 
         return Enumerable.Range(1, a).Aggregate(1, (x, y) => x * y);
     }
+    
+    public int BinomialCoefficient(int n, int k)
+    {
+        if (n < k)
+            throw new OperationDomainException("n must be greater than or equal to k.");
+     
+        return Factorial(n) / (Factorial(k) * Factorial(n - k));
+    }
 }
