@@ -75,4 +75,10 @@ public class BasicArithmeticTest
         Assert.Equal(expectedResult, result);
         Assert.Equal(expectedReminder, remainder);
     }
+    
+    [Fact]
+    public void DivideByZeroTestInt()
+    {
+        Assert.Throws<DivideByZeroException>(() => _intCalculator.DivideRemainder(1, 0));
+    }
 }
