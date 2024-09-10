@@ -4,6 +4,14 @@ namespace Calculator;
 
 public class DoubleCalculator: BasicArithmetic<double>
 {
+    public new (double result, double remainig) DivideRemainder(double a, double b)
+    {
+        if (b == 0)
+            throw new DivideByZeroException();
+
+        return (Math.Floor(a / b), a % b);
+    }
+
     public override double Power(double a, double b)
     {
         return Math.Pow(a, b);

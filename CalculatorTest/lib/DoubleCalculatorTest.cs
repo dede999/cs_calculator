@@ -10,6 +10,15 @@ public class DoubleCalculatorTest
     private DoubleCalculator _calculator = new();
 
     [Theory]
+    [InlineData(2, 1, 7.0, 3.0)]
+    [InlineData(1, 0, 2.0, 2.0)]
+    [InlineData(3, 0.5, 8.0, 2.5)]
+    public void DivideRemainderTest(double expected, double remainder, double a, double b)
+    {
+        Assert.Equal((expected, remainder), _calculator.DivideRemainder(a, b));
+    }
+    
+    [Theory]
     [InlineData(1, 1, 0)]
     [InlineData(5.6568542494923806, 2.0, 2.5)]
     [InlineData(0.5, 4.0, -0.5)]
