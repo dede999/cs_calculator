@@ -1,7 +1,9 @@
+using System.Diagnostics.CodeAnalysis;
 using Calculator;
 
 namespace CalculatorTest.helper;
 
+[ExcludeFromCodeCoverage]
 class MyDoubleCalculatorClass : BasicArithmetic<double>
 {
     public MyDoubleCalculatorClass() {}

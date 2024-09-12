@@ -1,7 +1,9 @@
+using System.Diagnostics.CodeAnalysis;
 using Calculator;
 
 namespace CalculatorTest.helper;
 
+[ExcludeFromCodeCoverage]
 public class MyIntCalculator: BasicArithmetic<int>
 {
     public override int Power(int a, int b)
