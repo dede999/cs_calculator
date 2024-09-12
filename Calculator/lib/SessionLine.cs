@@ -1,6 +1,6 @@
-namespace Calculator;
+namespace Calculator.lib;
 
-public class SessionLine
-{
-    
-}
+public record SessionLine(
+    String Command,
+    String? Result,
+    String? Error);

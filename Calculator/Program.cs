@@ -5,7 +5,7 @@ using Calculator.lib;
 
 Console.WriteLine("Hello, World!");
 
-Session session = new(new IntegerCalculator(), new DoubleCalculator());
+Session session = new();
 
 // Integer operations
 session.AddLine("I", "Power", 2, 3);
