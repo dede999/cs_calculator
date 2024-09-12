@@ -17,6 +17,13 @@ public class DoubleCalculatorTest
     {
         Assert.Equal((expected, remainder), _calculator.DivideRemainder(a, b));
     }
+
+
+    [Fact]
+    public void DivideRemainderTest_ThrowsDivideByZeroException()
+    {
+        Assert.Throws<DivideByZeroException>(() => _calculator.DivideRemainder(1, 0));
+    }
     
     [Theory]
     [InlineData(1, 1, 0)]
@@ -47,6 +54,7 @@ public class DoubleCalculatorTest
     
     [Theory]
     [InlineData(1, 0, 0)]
+    [InlineData(0, 0, 4)]
     [InlineData(1, 1, 1)]
     [InlineData(1, 2, 0)]
     [InlineData(3, 3, 1)]

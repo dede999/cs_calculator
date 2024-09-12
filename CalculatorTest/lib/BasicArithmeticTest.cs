@@ -1,5 +1,4 @@
-using System.Numerics;
-using Calculator;
+using System.Diagnostics.CodeAnalysis;
 using CalculatorTest.helper;
 
 namespace CalculatorTest.lib;

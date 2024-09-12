@@ -26,6 +26,7 @@ public class IntegerCalculatorTest
     [InlineData(1, 0, 0)]
     [InlineData(1, 1, 1)]
     [InlineData(1, 2, 0)]
+    [InlineData(0, 0, 4)]
     [InlineData(3, 3, 1)]
     [InlineData(256, 4, 2)]
     [InlineData(3125, 5, 2)]
